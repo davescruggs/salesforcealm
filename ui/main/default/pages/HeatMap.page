@@ -99,6 +99,5 @@
         <script src="{!URLFOR($Resource.heatmap)}"></script>
 
     </body>
-
     </html>
 </apex:page>
