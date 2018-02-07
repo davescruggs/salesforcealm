@@ -2,39 +2,39 @@
   "packageDirectories": [
     {
       "path": "ui",
-      "id": "<Replace with Package2 ID>",
+      "id": "0Ho1N000000CaSFSA0",
       "versionName": "v 1.0",
       "versionDescription": "ver 1.0",
       "versionNumber": "1.0.0.NEXT",
       "ancestorId": "",
       "dependencies": [
         {
-        "packageId": "<Replace with Core Package ID>",
+        "packageId": "0Ho1N000000CaS0SAK",
         "versionNumber": "1.0.0.LATEST"
         },
         {
-        "packageId": "<Replace with Logic Package ID>",
+        "packageId": "0Ho1N000000CaS5SAK",
         "versionNumber": "1.0.0.LATEST"
         }
         ]
     },
     {
       "path": "logic",
-      "id": "<Replace with Package2 ID>",
+      "id": "0Ho1N000000CaS5SAK",
       "versionName": "v 1.0",
       "versionDescription": "ver 1.0",
       "versionNumber": "1.0.0.NEXT",
       "ancestorId": "",
       "dependencies": [
         {
-        "packageId": "<Replace with Core Package ID>",
+        "packageId": "0Ho1N000000CaS0SAK",
         "versionNumber": "1.0.0.LATEST"
         }
         ]
     },
     {
       "path": "core",
-      "id": "<Replace with Package2 ID>",
+      "id": "0Ho1N000000CaS0SAK",
       "versionName": "v 1.0",
       "versionDescription": "ver 1.0",
       "versionNumber": "1.0.0.NEXT",
@@ -42,22 +42,22 @@
     },
     {
       "path": "security",
-      "id": "<Replace with Package2 ID>",
+      "id": "0Ho1N000000CaSASA0",
       "versionName": "v 1.0",
       "versionDescription": "ver 1.0",
       "versionNumber": "1.0.0.NEXT",
       "ancestorId": "",
       "dependencies": [
         {
-        "packageId": "<Core Package ID>",
+        "packageId": "0Ho1N000000CaS0SAK",
         "versionNumber": "1.0.0.LATEST"
         },
         {
-        "packageId": "<Logic Package ID>",
+        "packageId": "0Ho1N000000CaS5SAK",
         "versionNumber": "1.0.0.LATEST"
         },
         {
-          "packageId": "<UI Package ID>",
+          "packageId": "0Ho1N000000CaSFSA0",
           "versionNumber": "1.0.0.LATEST"
           }
         ]
