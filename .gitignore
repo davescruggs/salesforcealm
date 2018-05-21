@@ -9,8 +9,6 @@ node_modules
 .settings
 selenium-client-jars/
 test/artifacts
-<<<<<<< HEAD
 setenv.sh 
-=======
 .vscode
->>>>>>> f99febd2884398174fb31563cab529ba8deffe6d
+assets/server.key 
