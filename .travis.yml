@@ -26,8 +26,8 @@ before_install:
 - sfdx update
 - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key
   --username $USERNAME --setdefaultdevhubusername -a HubOrg
-- sfdx force:auth:jwt:grant -i $SBOXCONSUMERKEY -f assets/server.key -r https://test.salesforce.com
-  -u $SBOXUSERNAME
+# SBOX stuff just for sandboxes, AFAIK
+# - sfdx force:auth:jwt:grant -i $SBOXCONSUMERKEY -f assets/server.key -r https://test.salesforce.com  -u $SBOXUSERNAME
 script:
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg
 - sfdx force:source:push -u ciorg
@@ -38,8 +38,8 @@ script:
 - sfdx force:package:install -w 30 -u pkgInstallOrg -i $logicId
 - sfdx force:package:install -w 30 -u pkgInstallOrg -i $uiId
 - sfdx force:package:install -w 30 -u pkgInstallOrg -i $securityId
-- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $coreId
-- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $logicId
-- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $uiId
-- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $securityId
+#- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $coreId
+#- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $logicId
+#- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $uiId
+#- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $securityId
 - sfdx force:org:delete -u pkgInstallOrg -p
