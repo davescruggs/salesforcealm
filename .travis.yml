@@ -14,8 +14,14 @@ before_install:
 - export SFDX_AUTOUPDATE_DISABLE=true
 - export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
 - export SFDX_DOMAIN_RETRY=300
-- wget -qO- $URL | tar xJf -
+# The URL sfdx image now gives make and model in the folder, 
+# so we create an 'sfdx' folder
+# and we wget and unpack into that
+# then install. (4 lines of comments to explain 3 lines of code)
+- mkdir sfdx
+- wget -qO- $URL | tar xJ -C sfdx --strip-components 1
 - "./sfdx/install"
+# done unpacking the sfdx cli, on to other stuff like adding to path and using it
 - export PATH=./sfdx/$(pwd):$PATH
 - sfdx update
 - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key
