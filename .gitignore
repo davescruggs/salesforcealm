@@ -12,3 +12,5 @@ test/artifacts
 setenv.sh 
 .vscode
 assets/server.key 
+assets/server.crt
+assets/server.csr 
