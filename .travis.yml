@@ -4,18 +4,18 @@ cache: false
 env:
   global:
   - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
-  - coreId=05i1N0000008OIeQAM
-  - logicId=05i1N0000008OIoQAM
-  - uiId=05i1N0000008OItQAM
-  - securityId=05i1N0000008OIyQAM
+  - coreId=05i1N000000KylbQAC 
+  - logicId=05i1N000000KylgQAC
+  - uiId=05i1N000000KyllQAC
+  - securityId=05i1N000000KylqQAC 
 before_install:
 - openssl aes-256-cbc -K $encrypted_ca114f687cd3_key -iv $encrypted_ca114f687cd3_iv
   -in assets/server.key.enc -out assets/server.key -d
 - export SFDX_AUTOUPDATE_DISABLE=true
 - export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
 - export SFDX_DOMAIN_RETRY=300
-# The URL sfdx image now gives make and model in the folder, 
-# so we create an 'sfdx' folder
+# The URL sfdx image now gives OS and version in the folder name, which would break the 
+# build on version changes, so we create an 'sfdx' folder
 # and we wget and unpack into that
 # then install. (4 lines of comments to explain 3 lines of code)
 - mkdir sfdx
